@@ -32,7 +32,10 @@ request(url, function(err, resp, html, rrr, body) {
                 var productURL = "http://shop.fuckthepopulation.com" + $(this).find("a").attr('href');
                 var productName = $(this).find("h2").text();
                 var productPrice = $(this).find("h3").text();
-                var availability = $(this).find("h5")
+                var availability = $(this).find("h5").text();
+                var productImage = $(this).find("img").attr('src');
+
+                if (availability == "") availability = "Available";
 
                 console.log(productName);
                 console.log(productID);
@@ -52,16 +55,24 @@ request(url, function(err, resp, html, rrr, body) {
                         title: productName,
                         price: productPrice,
                         availability: availability,
+                        image: productImage,
+                        images: [],
+                        sizes: []
 
                     };
 
-                });
+                    console.log(metadata);
+                	parsedResults.items.push(metadata);
 
+                });
 
         	});
 
 		}
+
 	});
+
+
 });
 
 app.listen(process.env.PORT || 3000, function() {
