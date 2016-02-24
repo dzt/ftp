@@ -1,11 +1,11 @@
 var express = require('express'),
-app = express(),
-fs = require('fs'),
-request = require('request'),
-Crawler = require('simplecrawler'),
-twilio = require('twilio'),
-cheerio = require('cheerio'),
-md5 = require('md5');
+	app = express(),
+	fs = require('fs'),
+	request = require('request'),
+	Crawler = require('simplecrawler'),
+	twilio = require('twilio'),
+	cheerio = require('cheerio'),
+	md5 = require('md5');
 
 var url = "http://shop.fuckthepopulation.com/";
 
@@ -26,16 +26,18 @@ request(url, function(err, resp, html, rrr, body) {
 
         	};
 
-        	var product = $('li.product');
 
-        	product.each(function(i, element) {
+        	$('li.product').each(function(i, element) {
+                
+                var productID = $(this).attr('id');
+                var productURL = "http://shop.fuckthepopulation.com" + $(this).find("a").attr('href');
+                var productName = $(this).find("h2").text();
+                var productPrice = $(this).find("h3").text();
 
-        		var nextElement = $(this).next();
-                var prevElement = $(this).prev();
-
-                // var productLink = product.find('a').att();
-
-                console.log($(this).attr('id'));
+                console.log(productName);
+                console.log(productID);
+                console.log(productPrice);
+                console.log(productURL);
 
         	});
 
