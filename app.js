@@ -30,7 +30,12 @@ request(url, function(err, resp, html, rrr, body) {
 
         	product.each(function(i, element) {
 
-        		console.log($(this).text());
+        		var nextElement = $(this).next();
+                var prevElement = $(this).prev();
+
+                // var productLink = product.find('a').att();
+
+                console.log($(this).attr('id'));
 
         	});
 
