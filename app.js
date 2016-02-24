@@ -26,18 +26,37 @@ request(url, function(err, resp, html, rrr, body) {
 
         	};
 
-
         	$('li.product').each(function(i, element) {
                 
                 var productID = $(this).attr('id');
                 var productURL = "http://shop.fuckthepopulation.com" + $(this).find("a").attr('href');
                 var productName = $(this).find("h2").text();
                 var productPrice = $(this).find("h3").text();
+                var availability = $(this).find("h5")
 
                 console.log(productName);
                 console.log(productID);
                 console.log(productPrice);
                 console.log(productURL);
+
+                request(productURL, function(err, resp, html, rrr, body) {
+
+                	fs.writeFile('output.json', JSON.stringify(parsedResults, null, 4), function(err) {
+
+                    });
+
+                    var $ = cheerio.load(html);
+
+                    var metadata = {
+                        id: md5(productName),
+                        title: productName,
+                        price: productPrice,
+                        availability: availability,
+
+                    };
+
+                });
+
 
         	});
 
@@ -45,6 +64,6 @@ request(url, function(err, resp, html, rrr, body) {
 	});
 });
 
-app.listen(process.env.PORT || 3000, function(){
+app.listen(process.env.PORT || 3000, function() {
     console.log("Server is listening on port %d in %s mode", this.address().port, app.settings.env);
 });
