@@ -2,10 +2,11 @@
 
 Currently in development.
 
-This App features the ability to get push updates on the latest FTP Releases on your desired platform (Android or iOS), access lookbooks, and purchase items from the FTP Shop.
+This App features the ability to get push updates on the latest FTP Releases on your desired platform (Android or iOS), access lookbooks, and purchase items from the FTP Shop. The app also features official updates from the FTP Twitter.
 
-## Checklist
-- [] Finish Server Code
+## Notes
+
+- Research about in app mobile payments (Shopify API).
 
 License
 --------
