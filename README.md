@@ -1,5 +1,3 @@
-FTP
-====
 <img align="right" width="20%" style="float:right;padding:20px;" src="art/logo.png">
 
 Currently in development.
