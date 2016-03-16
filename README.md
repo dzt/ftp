@@ -4,6 +4,11 @@ Currently in development.
 
 This App features the ability to get push updates on the latest FTP Releases on your desired platform (Android or iOS), access lookbooks, and purchase items from the FTP Shop.
 
+## Checklist
+- [] Finish Server Code
+
 License
 --------
 This repository is licensed under MIT. See [LICENSE](https://github.com/dzt/ftp/blob/master/LICENSE) for the full license text.
+
+
