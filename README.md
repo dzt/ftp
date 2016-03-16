@@ -2,8 +2,6 @@
 
 Currently in development.
 
-</br>
-
 This App features the ability to get push updates on the latest FTP Releases on your desired platform (Android or iOS), access lookbooks, and purchase items from the FTP Shop.
 
 License
