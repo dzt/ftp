@@ -1,13 +1,13 @@
 var express = require('express'),
-	app = express(),
-	fs = require('fs'),
-	request = require('request'),
-	Crawler = require('simplecrawler'),
-	twilio = require('twilio'),
-	cheerio = require('cheerio'),
-	md5 = require('md5');
+    app = express(),
+    fs = require('fs'),
+    request = require('request'),
+    Crawler = require('simplecrawler'),
+    twilio = require('twilio'),
+    cheerio = require('cheerio'),
+    md5 = require('md5');
 
-var url = "http://shop.fuckthepopulation.com/";
+var url = "https://fuckthepopulation.com/collections/all";
 
 var crawler = Crawler.crawl(url);
 crawler.interval = 10000;
@@ -19,32 +19,32 @@ request(url, function(err, resp, html, rrr, body) {
         
         if (!err && resp.statusCode == 200) {
 
-        	var $ = cheerio.load(html);
-        	var parsedResults = {
+            var $ = cheerio.load(html);
+            var parsedResults = {
 
-        		items: []
+                items: []
 
-        	};
+            };
 
-        	$('li.product').each(function(i, element) {
+            $('a.grid-link').each(function(i, element) {
                 
-                var productID = $(this).attr('id');
-                var productURL = "http://shop.fuckthepopulation.com" + $(this).find("a").attr('href');
-                var productName = $(this).find("h2").text();
-                var productPrice = $(this).find("h3").text();
-                var availability = $(this).find("h5").text();
-                var productImage = $(this).find("img").attr('src');
+                var productURL = "https://fuckthepopulation.com" + $(this).attr('href');
+                var productName = $(this).find("p.grid-link__title").text();
+                var productPrice = $(this).find("span.product-single__price").text();
+                var availability = $(this).find("span.badge__text").text();
+                var price = $(this).find("p.grid-link__meta").text();
+
+                var sizes = $(this).find("select.single-option-selector").text();
+
+                //var productImage = $(this).find("img").attr('src');
+
+                console.log(productURL);
 
                 if (availability == "") availability = "Available";
 
-                console.log(productName);
-                console.log(productID);
-                console.log(productPrice);
-                console.log(productURL);
-
                 request(productURL, function(err, resp, html, rrr, body) {
 
-                	fs.writeFile('output.json', JSON.stringify(parsedResults, null, 4), function(err) {
+                    fs.writeFile('output.json', JSON.stringify(parsedResults, null, 4), function(err) {
 
                     });
 
@@ -53,26 +53,23 @@ request(url, function(err, resp, html, rrr, body) {
                     var metadata = {
                         id: md5(productName),
                         title: productName,
-                        price: productPrice,
+                        productURL: productURL,
+                        price: price,
                         availability: availability,
-                        image: productImage,
+                        //image: productImage,
                         images: [],
-                        sizes: []
+                        sizes: sizes
 
                     };
 
                     console.log(metadata);
-                	parsedResults.items.push(metadata);
+                    parsedResults.items.push(metadata);
 
                 });
 
-        	});
-
-		}
-
-	});
-
-
+            });
+        }
+    });
 });
 
 app.listen(process.env.PORT || 3000, function() {
