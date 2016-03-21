@@ -7,19 +7,19 @@
 //
 
 import UIKit
+import Buy
 
 class ViewController: UIViewController
+
 {
     // MARK: - IBOutlets
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    @IBOutlet weak var currentUserProfileImageButton: UIButton!
-    @IBOutlet weak var currentUserFullNameButton: UIButton!
-    
-    // MARK: - UICollectionViewDataSource
-    private var interests = Product.createInterests()
+    var products = [BUYProduct]()
+    var currentPage: UInt = 1
+    var reachedEnd = false
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
@@ -27,14 +27,27 @@ class ViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        fetchProducts()
+    }
+    
+    func fetchProducts() {
+        Shopify.client?.getProductsPage(currentPage) { (products, page, reachedEnd, error) -> Void in
+            self.currentPage = page
+            self.reachedEnd = reachedEnd
+            
+            guard let buyProducts = products as? [BUYProduct] else { return }
+            
+            self.products.appendContentsOf(buyProducts)
+            self.collectionView?.reloadData()
+        }
     }
     
     private struct Storyboard {
-        static let CellIdentifier = "Interest Cell"
+        static let CellIdentifier = "Product Cell"
     }
 }
+
+
 
 extension ViewController : UICollectionViewDataSource
 {
@@ -44,16 +57,21 @@ extension ViewController : UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return interests.count
+        return products.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
+        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! ProductCollectionViewCell
         
-        cell.interest = self.interests[indexPath.item]
+        let product = products[indexPath.row]
+        if let image = product.images.first, imageURL = NSURL(string: image.src) {
+            //cell.imageView.hnk_setImageFromURL(imageURL)
+        }
+        cell.productTitleLabel.text = product.title
+        return cell ?? UICollectionViewCell()
         
-        return cell
     }
 }
 

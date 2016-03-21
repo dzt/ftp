@@ -1,0 +1,15 @@
+platform :ios, 9
+
+use_frameworks!
+
+plugin 'cocoapods-keys', {
+  :project => 'FTP',
+  :keys => [
+  	'shopifyDomain',
+    'shopifyAPIKey',
+    'shopifyChannelId'
+  ]}
+
+# My extension pods
+pod 'Mobile-Buy-SDK', '~> 1.2.4'
+

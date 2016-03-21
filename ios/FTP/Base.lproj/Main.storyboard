@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OFD-jD-7F3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="phW-zv-wCa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -36,15 +36,16 @@
                                                 <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Interest Cell" id="qL5-7C-Em2" customClass="ProductCollectionViewCell" customModule="FTP" customModuleProvider="target">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Product Cell" id="qL5-7C-Em2" customClass="ProductCollectionViewCell" customModule="FTP" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="36" width="280" height="380"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="380"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="i1" translatesAutoresizingMaskIntoConstraints="NO" id="GBa-kL-yRr">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="i1" translatesAutoresizingMaskIntoConstraints="NO" id="GBa-kL-yRr">
                                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="300"/>
+                                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             </imageView>
                                                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gk9-dT-Jwv">
                                                                 <rect key="frame" x="0.0" y="300" width="280" height="80"/>
@@ -90,8 +91,9 @@
                                                         <constraint firstAttribute="trailing" secondItem="GBa-kL-yRr" secondAttribute="trailing" id="y5I-YA-ae6"/>
                                                     </constraints>
                                                     <connections>
-                                                        <outlet property="featuredImageView" destination="GBa-kL-yRr" id="OM9-xC-vLN"/>
-                                                        <outlet property="interestTitleLabel" destination="Hes-2u-cb7" id="8fQ-dP-R86"/>
+                                                        <outlet property="featuredImageView" destination="GBa-kL-yRr" id="phv-aF-1Ef"/>
+                                                        <outlet property="productPriceLabel" destination="7mn-hM-bsJ" id="WYo-dL-Tam"/>
+                                                        <outlet property="productTitleLabel" destination="Hes-2u-cb7" id="4aO-Tq-WdL"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -137,6 +139,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZW-fd-aM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-50" y="322"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="dVQ-7d-zud">
+            <objects>
+                <viewController id="phW-zv-wCa" customClass="SplashViewController" customModule="FTP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8hu-Il-kKb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lpq-G7-UnE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5xc-Oz-2j2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Egi-Fq-6LU">
+                                <rect key="frame" x="0.0" y="63" width="600" height="370"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="Odh-iI-mOi"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lpq-G7-UnE" firstAttribute="top" secondItem="Egi-Fq-6LU" secondAttribute="bottom" constant="167" id="9rR-KC-7om"/>
+                            <constraint firstItem="Egi-Fq-6LU" firstAttribute="top" secondItem="8hu-Il-kKb" secondAttribute="bottom" constant="43" id="lWh-KI-uJx"/>
+                            <constraint firstItem="Egi-Fq-6LU" firstAttribute="centerX" secondItem="5xc-Oz-2j2" secondAttribute="centerX" id="rqg-Ki-bYK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logo" destination="Egi-Fq-6LU" id="Qf9-8c-IL6"/>
+                        <segue destination="OFD-jD-7F3" kind="show" identifier="showApp" id="l8W-0v-Q1O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qif-6h-YwQ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759" y="322"/>
         </scene>
     </scenes>
     <resources>

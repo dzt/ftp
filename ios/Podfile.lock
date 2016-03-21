@@ -1,0 +1,17 @@
+PODS:
+  - Keys (1.0.0)
+  - Mobile-Buy-SDK (1.2.4)
+
+DEPENDENCIES:
+  - Keys (from `Pods/CocoaPodsKeys`)
+  - Mobile-Buy-SDK (~> 1.2.4)
+
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
+SPEC CHECKSUMS:
+  Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
+  Mobile-Buy-SDK: a999a38c934d056ad3a00e0225d47df8365d5480
+
+COCOAPODS: 0.39.0
