@@ -12,4 +12,4 @@ plugin 'cocoapods-keys', {
 
 # My extension pods
 pod 'Mobile-Buy-SDK', '~> 1.2.4'
-
+pod 'Haneke', '~> 1.0'

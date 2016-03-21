@@ -1,8 +1,10 @@
 PODS:
+  - Haneke (1.0.2)
   - Keys (1.0.0)
   - Mobile-Buy-SDK (1.2.4)
 
 DEPENDENCIES:
+  - Haneke (~> 1.0)
   - Keys (from `Pods/CocoaPodsKeys`)
   - Mobile-Buy-SDK (~> 1.2.4)
 
@@ -11,6 +13,7 @@ EXTERNAL SOURCES:
     :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
+  Haneke: 01454a67322faa0dd9d81fc0f447885044e71521
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
   Mobile-Buy-SDK: a999a38c934d056ad3a00e0225d47df8365d5480
 

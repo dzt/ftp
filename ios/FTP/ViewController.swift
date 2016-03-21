@@ -8,6 +8,7 @@
 
 import UIKit
 import Buy
+import Haneke
 
 class ViewController: UIViewController
 
@@ -67,7 +68,7 @@ extension ViewController : UICollectionViewDataSource
         
         let product = products[indexPath.row]
         if let image = product.images.first, imageURL = NSURL(string: image.src) {
-            //cell.imageView.hnk_setImageFromURL(imageURL)
+            cell.featuredImageView.hnk_setImageFromURL(imageURL)
         }
         cell.productTitleLabel.text = product.title
         return cell ?? UICollectionViewCell()
