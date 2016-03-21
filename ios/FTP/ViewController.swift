@@ -21,6 +21,7 @@ class ViewController: UIViewController
     var products = [BUYProduct]()
     var currentPage: UInt = 1
     var reachedEnd = false
+    var productVariant: BUYProductVariant?
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
@@ -67,9 +68,15 @@ extension ViewController : UICollectionViewDataSource
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! ProductCollectionViewCell
         
         let product = products[indexPath.row]
+        
         if let image = product.images.first, imageURL = NSURL(string: image.src) {
             cell.featuredImageView.hnk_setImageFromURL(imageURL)
         }
+        
+        // let variant: BUYProductVariant = product.variants
+        
+        // cell.productPriceLabel.text = NSString(format: "%.2ld $", (variant.price.floatValue)) as String
+        
         cell.productTitleLabel.text = product.title
         return cell ?? UICollectionViewCell()
         
@@ -90,4 +97,25 @@ extension ViewController : UIScrollViewDelegate
         offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
         targetContentOffset.memory = offset
     }
+    
+    
+    func productViewController() -> BUYProductViewController {
+        let theme       = BUYTheme()
+        theme.style     = .Light
+        theme.tintColor = UIColor.blackColor()
+        theme.showsProductImageBackground = true
+        
+        let productDetailController = BUYProductViewController(client: Shopify.client, theme: theme)
+        
+        return productDetailController
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let product     = products[indexPath.row]
+        let controller  = productViewController()
+        controller.loadWithProduct(product) { (success, error) -> Void in
+            controller.presentPortraitInViewController(self)
+        }
+    }
+    
 }
