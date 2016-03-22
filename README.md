@@ -36,17 +36,28 @@ pod install
 # Inside finder go into the <cloned directory>/ios and open up "FTP.xcworkspace"
 ```
 
+iOS Dependencies/Libraries Used
+-----------
+<a href="https://github.com/Shopify/mobile-buy-sdk-ios">MobileBuy SDK</a>
+</br>
+<a href="https://github.com/Haneke/HanekeSwift">HanekeSwift</a>
+
+
+
 Screenshots
 -----------
 <img src="art/ios.png" />
 
 Notes & Q&A
 -----------
-How to check the production key list and change there value? <a href="https://github.com/orta/cocoapods-keys">Here</a>
-Will there be an Android version? Yes, there will be a complete Android version in the next upcoming days?
-Is this the official FTP App? Yes
-What is the need for the server? The server is a basec web scraper that is no longer in use for this project as of right now.
-
+- How to check the production key list and change there value? <b><a href="https://github.com/orta/cocoapods-keys">Here</a></b>
+</br>
+- Will there be an Android version? <b>Yes, there will be a complete Android version in the next upcoming days?</b>
+</br>
+- Is this the official FTP App? <b>Yes</b>
+</br>
+- What is the need for the server? <b>The server is a basec web scraper that is no longer in use for this project as of right now.</b>
+</br>
 
 License
 --------
