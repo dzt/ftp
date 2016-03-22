@@ -28,15 +28,24 @@ Clone Project
 ```bash
 git clone https://github.com/dzt/ftp.git
 
-cd ftp
+cd ftp/ios
 
 # Install dependencies
 pod install
+
+# Inside finder go into the <cloned directory>/ios and open up "FTP.xcworkspace"
 ```
 
 Screenshots
 -----------
 <img src="art/ios.png" />
+
+Notes & Q&A
+-----------
+How to check the production key list and change there value? <a href="https://github.com/orta/cocoapods-keys">Here</a>
+Will there be an Android version? Yes, there will be a complete Android version in the next upcoming days?
+Is this the official FTP App? Yes
+What is the need for the server? The server is a basec web scraper that is no longer in use for this project as of right now.
 
 
 License
