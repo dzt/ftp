@@ -4,10 +4,12 @@ Currently in development.
 
 This App features the ability to get push updates on the latest FTP Releases on your desired platform (Android or iOS), access lookbooks, and purchase items from the FTP Shop. The app also features official updates from the FTP Twitter.
 
-Development
+Development (iOS)
 -----------
 
 Clone the project & install the dependencies
+
+Make sure you have your own Shopify Domain, API Key, and Shopify Channel ID. You can retrive this by simply setting up the <a href="https://docs.shopify.com/api/sdks/mobile-buy-sdk/add-mobile-app-sales-channel">Mobile App sales channel</a>, to retrive your key, domain, and channel id.
 
 If you don't have CocoaPods installed on your machine ensure to install it via bash.
 ```bash
