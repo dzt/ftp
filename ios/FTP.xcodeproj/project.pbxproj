@@ -96,20 +96,52 @@
 		D00A68B41C9DFD9000EF086B /* FTP */ = {
 			isa = PBXGroup;
 			children = (
-				D00A68B51C9DFD9000EF086B /* AppDelegate.swift */,
-				D0F792E11C9F5FDE002EC76F /* Shopify.swift */,
-				D00A68B71C9DFD9000EF086B /* ViewController.swift */,
-				D0F792D11C9E3201002EC76F /* ProductCollectionViewCell.swift */,
-				D05EDBEB1CA0927A0086575E /* SplashViewController.swift */,
-				D05EDBED1CA09DE10086575E /* UIImage+Gif.swift */,
-				D05EDBEF1CA0A0EB0086575E /* anim.gif */,
-				D00A68CB1C9E07EE00EF086B /* white.png */,
-				D00A68B91C9DFD9000EF086B /* Main.storyboard */,
-				D00A68CD1C9E08C200EF086B /* Launch.storyboard */,
+				D05EDBF41CA1E9470086575E /* Resources */,
+				D05EDBF31CA1E91D0086575E /* Extras/Essentials */,
+				D05EDBF21CA1E9170086575E /* Cells */,
+				D05EDBF11CA1E9090086575E /* ViewControllers */,
 				D00A68BC1C9DFD9000EF086B /* Assets.xcassets */,
-				D00A68C11C9DFD9000EF086B /* Info.plist */,
 			);
 			path = FTP;
+			sourceTree = "<group>";
+		};
+		D05EDBF11CA1E9090086575E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D05EDBEB1CA0927A0086575E /* SplashViewController.swift */,
+				D00A68B71C9DFD9000EF086B /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D05EDBF21CA1E9170086575E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D0F792D11C9E3201002EC76F /* ProductCollectionViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		D05EDBF31CA1E91D0086575E /* Extras/Essentials */ = {
+			isa = PBXGroup;
+			children = (
+				D00A68C11C9DFD9000EF086B /* Info.plist */,
+				D00A68CD1C9E08C200EF086B /* Launch.storyboard */,
+				D00A68B91C9DFD9000EF086B /* Main.storyboard */,
+				D0F792E11C9F5FDE002EC76F /* Shopify.swift */,
+				D05EDBED1CA09DE10086575E /* UIImage+Gif.swift */,
+				D00A68B51C9DFD9000EF086B /* AppDelegate.swift */,
+			);
+			name = Extras/Essentials;
+			sourceTree = "<group>";
+		};
+		D05EDBF41CA1E9470086575E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D00A68CB1C9E07EE00EF086B /* white.png */,
+				D05EDBEF1CA0A0EB0086575E /* anim.gif */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
