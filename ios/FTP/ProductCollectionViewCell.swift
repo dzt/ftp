@@ -15,7 +15,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var featuredImageView: UIImageView!
     @IBOutlet weak var productTitleLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
-    
+    @IBOutlet weak var availability: UILabel!
     
     required init(coder aDecoder: NSCoder) {
         

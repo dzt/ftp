@@ -77,6 +77,12 @@ extension ViewController : UICollectionViewDataSource
         
         // cell.productPriceLabel.text = NSString(format: "%.2ld $", (variant.price.floatValue)) as String
         
+        if (product.available == false) {
+            
+            cell.availability.text = "SOLD OUT"
+            
+        }
+    
         cell.productTitleLabel.text = product.title
         return cell ?? UICollectionViewCell()
         
