@@ -32,6 +32,10 @@ cd ftp
 pod install
 ```
 
+Screenshots
+-----------
+<img src="art/ios.png" />
+
 
 License
 --------
