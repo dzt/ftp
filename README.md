@@ -2,6 +2,8 @@
 
 Currently in development.
 
+<a href+"https://twitter.com/ZACFTP/status/712079447071961093">Video Demo</a>
+
 This App features the ability to get push updates on the latest FTP Releases on your desired platform (Android or iOS), access lookbooks, and purchase items from the FTP Shop. The app also features official updates from the FTP Twitter.
 
 Have any question? feel free to <a href="mailto:thepcmrtim@gmail.com">Email me</a>.
