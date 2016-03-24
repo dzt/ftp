@@ -13,7 +13,6 @@ import Haneke
 class ViewController: UIViewController
 
 {
-    // MARK: - IBOutlets
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -21,7 +20,7 @@ class ViewController: UIViewController
     var products = [BUYProduct]()
     var currentPage: UInt = 1
     var reachedEnd = false
-    var productVariant: BUYProductVariant?
+    
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
@@ -30,6 +29,7 @@ class ViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchProducts()
+ 
     }
     
     func fetchProducts() {
@@ -40,7 +40,9 @@ class ViewController: UIViewController
             guard let buyProducts = products as? [BUYProduct] else { return }
             
             self.products.appendContentsOf(buyProducts)
+            
             self.collectionView?.reloadData()
+        
         }
     }
     
@@ -68,14 +70,16 @@ extension ViewController : UICollectionViewDataSource
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! ProductCollectionViewCell
         
         let product = products[indexPath.row]
+        // let pVariant = products.variants[indexPath.row]
+        
         
         if let image = product.images.first, imageURL = NSURL(string: image.src) {
             cell.featuredImageView.hnk_setImageFromURL(imageURL)
         }
         
-        // let variant: BUYProductVariant = product.variants
         
-        // cell.productPriceLabel.text = NSString(format: "%.2ld $", (variant.price.floatValue)) as String
+        
+        // cell.productPriceLabel.text = NSString(format: "%.2ld $", (pVariant.price.floatValue)) as String
         
         if (product.available == false) {
             

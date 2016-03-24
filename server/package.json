@@ -1,6 +1,27 @@
 {
-
-"name": "ftp-bot",
-"author": "Peter Soboyejo <thepcmrtim@gmail.com>"
-
+  "name": "ftp-backend",
+  "version": "1.0.0",
+  "description": "The server handles push notifications and the FTP Administration Panel.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzt/ftp.git"
+  },
+  "keywords": [
+    "shopify"
+  ],
+  "author": "Peter Soboyejo <thepcmrtim@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dzt/ftp/issues"
+  },
+  "homepage": "https://github.com/dzt/ftp#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "fs": "0.0.2",
+    "node-pushserver": "^0.5.4"
+  }
 }

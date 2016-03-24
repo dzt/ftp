@@ -14,6 +14,7 @@
 		D00A68BD1C9DFD9000EF086B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00A68BC1C9DFD9000EF086B /* Assets.xcassets */; };
 		D00A68CC1C9E07EE00EF086B /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = D00A68CB1C9E07EE00EF086B /* white.png */; };
 		D00A68CE1C9E08C200EF086B /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00A68CD1C9E08C200EF086B /* Launch.storyboard */; };
+		D04C03FA1CA32B3E00CA3B19 /* ClosedStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04C03F91CA32B3E00CA3B19 /* ClosedStoreViewController.swift */; };
 		D05EDBEC1CA0927A0086575E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05EDBEB1CA0927A0086575E /* SplashViewController.swift */; };
 		D05EDBEE1CA09DE10086575E /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05EDBED1CA09DE10086575E /* UIImage+Gif.swift */; };
 		D05EDBF01CA0A0EB0086575E /* anim.gif in Resources */ = {isa = PBXBuildFile; fileRef = D05EDBEF1CA0A0EB0086575E /* anim.gif */; };
@@ -33,6 +34,7 @@
 		D00A68C11C9DFD9000EF086B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D00A68CB1C9E07EE00EF086B /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
 		D00A68CD1C9E08C200EF086B /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		D04C03F91CA32B3E00CA3B19 /* ClosedStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosedStoreViewController.swift; sourceTree = "<group>"; };
 		D05EDBEB1CA0927A0086575E /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D05EDBED1CA09DE10086575E /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		D05EDBEF1CA0A0EB0086575E /* anim.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = anim.gif; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				D05EDBEB1CA0927A0086575E /* SplashViewController.swift */,
 				D00A68B71C9DFD9000EF086B /* ViewController.swift */,
+				D04C03F91CA32B3E00CA3B19 /* ClosedStoreViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				D00A68B81C9DFD9000EF086B /* ViewController.swift in Sources */,
 				D00A68B61C9DFD9000EF086B /* AppDelegate.swift in Sources */,
 				D0F792D21C9E3201002EC76F /* ProductCollectionViewCell.swift in Sources */,
+				D04C03FA1CA32B3E00CA3B19 /* ClosedStoreViewController.swift in Sources */,
 				D05EDBEC1CA0927A0086575E /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
