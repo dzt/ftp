@@ -20,8 +20,17 @@
   },
   "homepage": "https://github.com/dzt/ftp#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
     "express": "^4.13.4",
+    "express-session": "^1.13.0",
     "fs": "0.0.2",
-    "node-pushserver": "^0.5.4"
+    "mongoose": "^4.4.10",
+    "morgan": "^1.7.0",
+    "node-pushserver": "^0.5.4",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
   }
 }

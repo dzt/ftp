@@ -1,0 +1,70 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>FTP Admin Panel</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<style>
+		body 		{ padding-top:80px; word-wrap:break-word; }
+	</style>
+</head>
+<body>
+<div class="container">
+
+	<div class="page-header text-center">
+		<img src="http://cdn.shopify.com/s/files/1/1198/9148/t/2/assets/logo.png?4725297321850372319" width="10%"/>
+		<br>
+		<br>
+		<a href="/logout" class="btn btn-default btn-sm">Logout</a>
+	</div>
+
+	<div class="row">
+
+
+		<div class="col-sm-6">
+			<div class="well">
+				<h3><span class="fa fa-mobile fa-1x"></span> Create A Push Notification</h3>
+
+					<p>
+						<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+						</br>
+						<button type="submit" class="btn btn-primary">Send Out to a bunch of fuck niggas</button>
+					</p>
+
+			</div>
+		</div>
+
+		<div class="col-sm-6">
+			<div class="well">
+				<h3><span class="fa fa-times fa-1x"></span> Closed Store Options</h3>
+
+				<form role="form">
+				<select class="form-control" id="sel1">
+				    <option>Open</option>
+				    <option>Close</option>
+				  </select>
+				  </br>
+
+				   <label for="email">Image URL</label>
+				   (example: https://i.imgur.com/SKsPvmz.jpg)
+				   <input type="email" class="form-control" id="email">
+
+				   </br>
+
+				  <div class="form-group">
+				    <label for="pwd">Message</label>
+				    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+						</br>
+				  </div>
+				  <button type="submit" class="btn btn-primary">Save Changes</button>
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+</body>
+</html>

@@ -54,7 +54,7 @@ Development (Server)
 Screenshots
 -----------
 <img src="art/ios.png" />
-
+<img src="art/web.png" />
 Notes & Q&A
 -----------
 - How to check the production key list and change there value? <b><a href="https://github.com/orta/cocoapods-keys">Here</a></b>
