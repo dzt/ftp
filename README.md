@@ -44,7 +44,12 @@ iOS Dependencies/Libraries Used
 </br>
 <a href="https://github.com/Haneke/HanekeSwift">HanekeSwift</a>
 
+Development (Server)
+-----------
 
+  - The server handles push notifications and the FTP Administration Panel.
+
+  - The Administration Panel allows <a href="twitter.com/zacftp"></a> and I to make push notifications through out both clients (Android and iOS) using <a href="https://www.npmjs.com/package/node-pushserver">node-pushserver</a>. In addition the server allows us to close or open the FTP store and change the closed store page (picture and message).
 
 Screenshots
 -----------
@@ -57,8 +62,6 @@ Notes & Q&A
 - Will there be an Android version? <b>Yes, there will be a complete Android version in the next upcoming days?</b>
 </br>
 - Is this the official FTP App? <b>Yes</b>
-</br>
-- What is the need for the server? <b>The server is a basec web scraper that is no longer in use for this project as of right now.</b>
 </br>
 
 License
