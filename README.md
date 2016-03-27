@@ -49,7 +49,7 @@ Development (Server)
 
   - The server handles push notifications and the FTP Administration Panel.
 
-  - The Administration Panel allows <a href="twitter.com/zacftp"></a> and I to make push notifications through out both clients (Android and iOS) using <a href="https://www.npmjs.com/package/node-pushserver">node-pushserver</a>. In addition the server allows us to close or open the FTP store and change the closed store page (picture and message).
+  - The Administration Panel allows <a href="twitter.com/zacftp"></a> and I to make push notifications through out both clients (Android and iOS) using <a href="https://www.npmjs.com/package/push-notify">push-notify</a>. In addition the server allows us to close or open the FTP store and change the closed store page (picture and message).
 
 Screenshots
 -----------
