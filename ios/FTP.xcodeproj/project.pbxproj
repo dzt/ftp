@@ -13,7 +13,6 @@
 		D00A68BB1C9DFD9000EF086B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00A68B91C9DFD9000EF086B /* Main.storyboard */; };
 		D00A68BD1C9DFD9000EF086B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00A68BC1C9DFD9000EF086B /* Assets.xcassets */; };
 		D00A68CC1C9E07EE00EF086B /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = D00A68CB1C9E07EE00EF086B /* white.png */; };
-		D00A68CE1C9E08C200EF086B /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00A68CD1C9E08C200EF086B /* Launch.storyboard */; };
 		D04C03FA1CA32B3E00CA3B19 /* ClosedStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04C03F91CA32B3E00CA3B19 /* ClosedStoreViewController.swift */; };
 		D05EDBEC1CA0927A0086575E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05EDBEB1CA0927A0086575E /* SplashViewController.swift */; };
 		D05EDBEE1CA09DE10086575E /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05EDBED1CA09DE10086575E /* UIImage+Gif.swift */; };
@@ -33,7 +32,6 @@
 		D00A68BC1C9DFD9000EF086B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D00A68C11C9DFD9000EF086B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D00A68CB1C9E07EE00EF086B /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
-		D00A68CD1C9E08C200EF086B /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		D04C03F91CA32B3E00CA3B19 /* ClosedStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosedStoreViewController.swift; sourceTree = "<group>"; };
 		D05EDBEB1CA0927A0086575E /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D05EDBED1CA09DE10086575E /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				D00A68C11C9DFD9000EF086B /* Info.plist */,
-				D00A68CD1C9E08C200EF086B /* Launch.storyboard */,
 				D00A68B91C9DFD9000EF086B /* Main.storyboard */,
 				D0F792E11C9F5FDE002EC76F /* Shopify.swift */,
 				D05EDBED1CA09DE10086575E /* UIImage+Gif.swift */,
@@ -182,7 +179,12 @@
 				TargetAttributes = {
 					D00A68B11C9DFD9000EF086B = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = F62D38X3Q2;
+						DevelopmentTeam = QY86RB3BQW;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -212,7 +214,6 @@
 				D00A68CC1C9E07EE00EF086B /* white.png in Resources */,
 				D00A68BD1C9DFD9000EF086B /* Assets.xcassets in Resources */,
 				D05EDBF01CA0A0EB0086575E /* anim.gif in Resources */,
-				D00A68CE1C9E08C200EF086B /* Launch.storyboard in Resources */,
 				D00A68BB1C9DFD9000EF086B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,14 +383,17 @@
 			baseConfigurationReference = DE8FA208CA450AB7793029B5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = FTP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fuckthepopulation.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcufthepopulation.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -398,14 +402,17 @@
 			baseConfigurationReference = E5AC6F009F7B73C3963A7486 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = FTP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fuckthepopulation.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcufthepopulation.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -11,7 +11,7 @@ import Buy
 import Haneke
 
 class ViewController: UIViewController
-
+    
 {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -29,7 +29,7 @@ class ViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchProducts()
- 
+        
     }
     
     func fetchProducts() {
@@ -42,7 +42,7 @@ class ViewController: UIViewController
             self.products.appendContentsOf(buyProducts)
             
             self.collectionView?.reloadData()
-        
+            
         }
     }
     
@@ -70,7 +70,7 @@ extension ViewController : UICollectionViewDataSource
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! ProductCollectionViewCell
         
         let product = products[indexPath.row]
-        // let pVariant = products.variants[indexPath.row]
+        //let pVariant = products.variants[indexPath.row]
         
         
         if let image = product.images.first, imageURL = NSURL(string: image.src) {
@@ -79,14 +79,14 @@ extension ViewController : UICollectionViewDataSource
         
         
         
-        // cell.productPriceLabel.text = NSString(format: "%.2ld $", (pVariant.price.floatValue)) as String
+        //cell.productPriceLabel.text = NSString(format: "%.2ld $", (pVariant.price.floatValue)) as String
         
         if (product.available == false) {
             
             cell.availability.text = "SOLD OUT"
             
         }
-    
+        
         cell.productTitleLabel.text = product.title
         return cell ?? UICollectionViewCell()
         
