@@ -25,13 +25,13 @@
 		<div class="col-sm-6">
 			<div class="well">
 				<h3><span class="fa fa-mobile fa-1x"></span> Create A Push Notification</h3>
-
+				<form action="/push" method="post">
 					<p>
-						<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+						<textarea class="form-control" id="message" rows="3" name="message" value="message"></textarea>
 						</br>
 						<button type="submit" class="btn btn-primary">Push to the Homies</button>
 					</p>
-
+				</form>
 			</div>
 		</div>
 
@@ -39,22 +39,24 @@
 			<div class="well">
 				<h3><span class="fa fa-times fa-1x"></span> Closed Store Options</h3>
 
-				<form role="form">
-				<select class="form-control" id="sel1">
-				    <option>Open</option>
-				    <option>Close</option>
-				  </select>
+				<form action="/updateStore" method="post">
+
+
+					<label for="text">Store Status</label>
+				   type in "open" or "closed" to set the store status
+				   <input type="text" class="form-control" id="text" name="stat" value="">
+
 				  </br>
 
-				   <label for="email">Image URL</label>
+				   <label for="text">Image URL</label>
 				   (example: https://i.imgur.com/SKsPvmz.jpg)
-				   <input type="email" class="form-control" id="email">
+				   <input type="text" class="form-control" id="text" name="imageURL" value="">
 
 				   </br>
 
 				  <div class="form-group">
 				    <label for="pwd">Message</label>
-				    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+				    <textarea class="form-control" id="exampleTextarea" rows="3" name="message" value="message"></textarea>
 						</br>
 				  </div>
 				  <button type="submit" class="btn btn-primary">Save Changes</button>
