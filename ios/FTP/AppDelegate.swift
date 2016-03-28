@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
         Shopify.configure()
         requestPushes()
+        checkStoreStatus()
         
         application.applicationIconBadgeNumber = 0
         application.cancelAllLocalNotifications()
@@ -47,6 +49,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func checkStoreStatus() {
+        
+    }
+    
     
     func requestPushes() {
         

@@ -1,4 +1,4 @@
-	require('dotenv').load();
+	//require('dotenv').load();
 
 	var express  = require('express');
 	var app      = express();
@@ -13,6 +13,7 @@
 	var ejs = require('ejs');
 	var notify = require('push-notify');
 	var fs = require('fs');
+	var path = require('path');
 
 	mongoose.connect(process.env.MONGOLAB_URI);
 
@@ -66,8 +67,9 @@
 
 	app.get('/status', function(req, res) {
 
-		var json = fs.readFileSync(path.join(__dirname, "status.json"));
-		res.send(json);
+		fs.readFile('status.json',function(err,data){
+			res.json(JSON.parse(data));
+		});
 
 	});
 
@@ -82,6 +84,8 @@
 		fs.writeFile('status.json', JSON.stringify(json, null, 4), function(err) {
 
         });
+
+        res.redirect('/status');
 
 	});
 
@@ -102,6 +106,6 @@
 
 
 
-	app.listen(8080, function(){
-	  console.log('Admin Panel is running on port 8080');
+	app.listen(process.env.PORT || 3000, function(){
+	  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 	});
