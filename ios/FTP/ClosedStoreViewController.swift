@@ -31,8 +31,6 @@ class ClosedStoreViewController: UIViewController {
                 
                 let response = JSON as! NSDictionary
                 
-                // var fuck = response.objectForKey("closedDescription") as! String
-                
                 
                 
                 self.closedImage.hnk_setImageFromURL(NSURL(string: "https://i.imgur.com/SKsPvmz.jpg?1"))
@@ -46,8 +44,6 @@ class ClosedStoreViewController: UIViewController {
             
             }
         }
-        
-
     }
-
+    
 }

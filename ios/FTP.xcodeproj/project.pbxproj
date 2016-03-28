@@ -36,6 +36,7 @@
 		D05EDBEB1CA0927A0086575E /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D05EDBED1CA09DE10086575E /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		D05EDBEF1CA0A0EB0086575E /* anim.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = anim.gif; sourceTree = "<group>"; };
+		D0F125181CA8E89F00ED182A /* FTP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTP-Bridging-Header.h"; sourceTree = "<group>"; };
 		D0F792D11C9E3201002EC76F /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0F792E11C9F5FDE002EC76F /* Shopify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shopify.swift; sourceTree = "<group>"; };
 		DDE4715A6042F99439FAE940 /* Pods-FTP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTP.release.xcconfig"; path = "Pods/Target Support Files/Pods-FTP/Pods-FTP.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,8 +130,9 @@
 				D00A68C11C9DFD9000EF086B /* Info.plist */,
 				D00A68B91C9DFD9000EF086B /* Main.storyboard */,
 				D0F792E11C9F5FDE002EC76F /* Shopify.swift */,
-				D05EDBED1CA09DE10086575E /* UIImage+Gif.swift */,
 				D00A68B51C9DFD9000EF086B /* AppDelegate.swift */,
+				D05EDBED1CA09DE10086575E /* UIImage+Gif.swift */,
+				D0F125181CA8E89F00ED182A /* FTP-Bridging-Header.h */,
 			);
 			name = Extras/Essentials;
 			sourceTree = "<group>";
@@ -394,6 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kcufthepopulation.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "251a6bed-bdd6-4215-a287-96ce3844d9b8";
+				SWIFT_OBJC_BRIDGING_HEADER = "FTP/FTP-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -413,6 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kcufthepopulation.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "251a6bed-bdd6-4215-a287-96ce3844d9b8";
+				SWIFT_OBJC_BRIDGING_HEADER = "FTP/FTP-Bridging-Header.h";
 			};
 			name = Release;
 		};

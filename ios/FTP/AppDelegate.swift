@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Keys
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,16 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
+        let oneSignal = OneSignal(launchOptions: launchOptions, appId: FtpKeys().oneSignalAPIKey(), handleNotification: nil)
+        
+        OneSignal.defaultClient().enableInAppAlertNotification(true)
+        
         Shopify.configure()
         requestPushes()
-        checkStoreStatus()
         
         application.applicationIconBadgeNumber = 0
         application.cancelAllLocalNotifications()
         
         return true
     }
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -49,11 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    func checkStoreStatus() {
-        
-    }
-    
+
     
     func requestPushes() {
         
@@ -71,6 +73,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(error)
     }
 
-
 }
-

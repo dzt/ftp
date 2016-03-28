@@ -1,4 +1,4 @@
-	//require('dotenv').load();
+	require('dotenv').load();
 
 	var express  = require('express');
 	var app      = express();
@@ -32,6 +32,11 @@
 	var apn = notify.apn({
 		key: 'apple_push_notifications.pem',
 		cert: 'apple_push_notifications.pem'
+	});
+
+	apn.send({
+			token: '<b3c676ac 8fd28d5f dc6e8203 2a2b1811 b165a10d e5267b0a 7bbe0f4d 2d6f1388>',
+			alert: "Fuck this piece of shit"
 	});
 
 	require('./passport')(passport);
@@ -97,6 +102,7 @@
 		});
 
 	});
+
 
 	function isLoggedIn(req, res, next) {
 		if (req.isAuthenticated())

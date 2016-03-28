@@ -130,47 +130,11 @@
                                                 <constraint firstAttribute="height" constant="63" id="jBu-KB-XKn"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBp-QT-hPD">
-                                            <rect key="frame" x="248" y="38" width="105" height="63"/>
-                                            <connections>
-                                                <segue destination="hgu-wd-6dG" kind="show" id="GwS-xr-TAw"/>
-                                            </connections>
-                                        </button>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insta-white" translatesAutoresizingMaskIntoConstraints="NO" id="VxD-La-h4N">
-                                            <rect key="frame" x="286" y="515" width="30" height="30"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail-white" translatesAutoresizingMaskIntoConstraints="NO" id="w6P-7h-6OQ">
-                                            <rect key="frame" x="324" y="515" width="30" height="30"/>
-                                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="30" id="Cjd-kA-XqE"/>
-                                            </constraints>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird-white" translatesAutoresizingMaskIntoConstraints="NO" id="iRB-yo-wo8">
-                                            <rect key="frame" x="248" y="515" width="30" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="30" id="PBl-hR-BHX"/>
-                                                <constraint firstAttribute="height" constant="30" id="YDS-2O-aCN"/>
-                                            </constraints>
-                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ayn-7j-aLA" firstAttribute="centerX" secondItem="fuY-Jc-PMr" secondAttribute="centerX" id="9fT-mM-Zjo"/>
                                         <constraint firstItem="ayn-7j-aLA" firstAttribute="top" secondItem="dyu-0V-KoD" secondAttribute="top" constant="26" id="Cx9-um-sBR"/>
-                                        <constraint firstItem="w6P-7h-6OQ" firstAttribute="bottom" secondItem="VxD-La-h4N" secondAttribute="bottom" id="DhI-HP-UG6"/>
-                                        <constraint firstItem="iRB-yo-wo8" firstAttribute="top" secondItem="VxD-La-h4N" secondAttribute="top" id="HTB-QQ-3o0"/>
-                                        <constraint firstItem="VxD-La-h4N" firstAttribute="top" secondItem="w6P-7h-6OQ" secondAttribute="top" id="ThN-0G-hj6"/>
                                         <constraint firstItem="ayn-7j-aLA" firstAttribute="centerX" secondItem="dyu-0V-KoD" secondAttribute="centerX" id="V7j-g3-oA3"/>
-                                        <constraint firstItem="w6P-7h-6OQ" firstAttribute="leading" secondItem="VxD-La-h4N" secondAttribute="trailing" constant="8" symbolic="YES" id="box-H5-11c"/>
-                                        <constraint firstItem="VxD-La-h4N" firstAttribute="leading" secondItem="iRB-yo-wo8" secondAttribute="trailing" constant="8" symbolic="YES" id="ccL-Km-gOx"/>
-                                        <constraint firstItem="hBp-QT-hPD" firstAttribute="bottom" secondItem="ayn-7j-aLA" secondAttribute="bottom" id="dR1-yU-7i4"/>
-                                        <constraint firstItem="hBp-QT-hPD" firstAttribute="top" secondItem="ayn-7j-aLA" secondAttribute="top" id="iQM-6L-ILu"/>
-                                        <constraint firstItem="hBp-QT-hPD" firstAttribute="centerX" secondItem="fuY-Jc-PMr" secondAttribute="centerX" id="jYV-k0-Gp1"/>
-                                        <constraint firstItem="VxD-La-h4N" firstAttribute="bottom" secondItem="iRB-yo-wo8" secondAttribute="bottom" id="ny3-52-rBL"/>
-                                        <constraint firstItem="hBp-QT-hPD" firstAttribute="leading" secondItem="ayn-7j-aLA" secondAttribute="leading" id="pHK-rx-Bdr"/>
-                                        <constraint firstItem="iRB-yo-wo8" firstAttribute="leading" secondItem="ayn-7j-aLA" secondAttribute="leading" id="pbl-Wb-8U1"/>
-                                        <constraint firstAttribute="bottom" secondItem="iRB-yo-wo8" secondAttribute="bottom" constant="55" id="pps-sA-e0J"/>
-                                        <constraint firstItem="VxD-La-h4N" firstAttribute="centerX" secondItem="hBp-QT-hPD" secondAttribute="centerX" id="rTa-aD-hdZ"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="dark"/>
@@ -195,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZW-fd-aM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50" y="322"/>
+            <point key="canvasLocation" x="-41" y="714"/>
         </scene>
         <!--Closed Store View Controller-->
         <scene sceneID="uIb-5J-hS6">
@@ -209,12 +173,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fade" translatesAutoresizingMaskIntoConstraints="NO" id="u0C-nG-boY">
-                                <rect key="frame" x="20" y="92" width="560" height="202"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="202" id="aWq-Ve-hCD"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fade" translatesAutoresizingMaskIntoConstraints="NO" id="46C-vR-EpR">
                                 <rect key="frame" x="256" y="524" width="89" height="68"/>
                                 <constraints>
@@ -257,6 +215,12 @@
                                     <constraint firstAttribute="height" constant="51" id="pBs-lQ-oji"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fade" translatesAutoresizingMaskIntoConstraints="NO" id="u0C-nG-boY">
+                                <rect key="frame" x="20" y="92" width="560" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="202" id="aWq-Ve-hCD"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -287,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eK0-ck-ZWx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="716" y="322"/>
+            <point key="canvasLocation" x="635" y="322"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="dVQ-7d-zud">
@@ -300,6 +264,14 @@
                     <view key="view" contentMode="scaleToFill" id="5xc-Oz-2j2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="300" affinity="minY"/>
+                            <userLayoutGuide location="300" affinity="minY"/>
+                            <userLayoutGuide location="300" affinity="minY"/>
+                            <userLayoutGuide location="300" affinity="minY"/>
+                            <userLayoutGuide location="300" affinity="minY"/>
+                            <userLayoutGuide location="300" affinity="minY"/>
+                        </userGuides>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Egi-Fq-6LU">
                                 <rect key="frame" x="0.0" y="63" width="600" height="370"/>
@@ -318,6 +290,7 @@
                     <connections>
                         <outlet property="logo" destination="Egi-Fq-6LU" id="Qf9-8c-IL6"/>
                         <segue destination="OFD-jD-7F3" kind="show" identifier="showApp" id="l8W-0v-Q1O"/>
+                        <segue destination="hgu-wd-6dG" kind="show" identifier="closedSegue" id="XKK-CL-qpn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qif-6h-YwQ" sceneMemberID="firstResponder"/>
@@ -327,14 +300,11 @@
     </scenes>
     <resources>
         <image name="bird-black" width="100" height="100"/>
-        <image name="bird-white" width="100" height="100"/>
         <image name="fade" width="500" height="500"/>
         <image name="insta-black" width="100" height="100"/>
-        <image name="insta-white" width="100" height="100"/>
         <image name="k" width="600" height="400"/>
         <image name="logo" width="1340" height="490"/>
         <image name="mail-black" width="100" height="100"/>
-        <image name="mail-white" width="100" height="100"/>
         <image name="white.png" width="1340" height="490"/>
     </resources>
 </document>
