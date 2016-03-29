@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let oneSignal = OneSignal(launchOptions: launchOptions, appId: FtpKeys().oneSignalAPIKey(), handleNotification: nil)
         
         OneSignal.defaultClient().enableInAppAlertNotification(true)
-        
         Shopify.configure()
         requestPushes()
         

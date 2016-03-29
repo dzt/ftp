@@ -64,6 +64,7 @@ extension ViewController : UICollectionViewDataSource
         return products.count
     }
     
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
         
@@ -107,6 +108,7 @@ extension ViewController : UIScrollViewDelegate
         
         offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
         targetContentOffset.memory = offset
+        
     }
     
     

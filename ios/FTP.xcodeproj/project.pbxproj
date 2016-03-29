@@ -17,6 +17,7 @@
 		D05EDBEC1CA0927A0086575E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05EDBEB1CA0927A0086575E /* SplashViewController.swift */; };
 		D05EDBEE1CA09DE10086575E /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05EDBED1CA09DE10086575E /* UIImage+Gif.swift */; };
 		D05EDBF01CA0A0EB0086575E /* anim.gif in Resources */ = {isa = PBXBuildFile; fileRef = D05EDBEF1CA0A0EB0086575E /* anim.gif */; };
+		D0F1251A1CA98A6A00ED182A /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F125191CA98A6100ED182A /* SpriteKit.framework */; };
 		D0F792D21C9E3201002EC76F /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F792D11C9E3201002EC76F /* ProductCollectionViewCell.swift */; };
 		D0F792E21C9F5FDE002EC76F /* Shopify.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F792E11C9F5FDE002EC76F /* Shopify.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		D05EDBED1CA09DE10086575E /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		D05EDBEF1CA0A0EB0086575E /* anim.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = anim.gif; sourceTree = "<group>"; };
 		D0F125181CA8E89F00ED182A /* FTP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTP-Bridging-Header.h"; sourceTree = "<group>"; };
+		D0F125191CA98A6100ED182A /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		D0F792D11C9E3201002EC76F /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0F792E11C9F5FDE002EC76F /* Shopify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shopify.swift; sourceTree = "<group>"; };
 		DDE4715A6042F99439FAE940 /* Pods-FTP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTP.release.xcconfig"; path = "Pods/Target Support Files/Pods-FTP/Pods-FTP.release.xcconfig"; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F1251A1CA98A6A00ED182A /* SpriteKit.framework in Frameworks */,
 				6D21F0199778E28D735A462E /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +62,7 @@
 		18C83BF80F0A7CD60672CFD9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0F125191CA98A6100ED182A /* SpriteKit.framework */,
 				11973A7969D7F4E1857AD73D /* Pods_FTP.framework */,
 				182A61D1EE9872B4CE9C800B /* Pods.framework */,
 			);

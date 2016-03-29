@@ -35,8 +35,7 @@ class SplashViewController: UIViewController {
                 print("Success with JSON: \(JSON)")
                 
                 let response = JSON as! NSDictionary
-                
-                var status = response.objectForKey("staus") as! String
+                let status = response.objectForKey("status") as! String
                 
                 if (status == "closed") {
                     self.performSegueWithIdentifier("closedSegue", sender: self)

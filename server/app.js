@@ -1,4 +1,4 @@
-	require('dotenv').load();
+	// require('dotenv').load();
 
 	var express  = require('express');
 	var app      = express();
@@ -15,6 +15,9 @@
 	var fs = require('fs');
 	var path = require('path');
 
+	var Status = require('./status');
+	var ObjectId = require('mongoose').Types.ObjectId; 
+
 	mongoose.connect(process.env.MONGOLAB_URI);
 
 	var app = express();
@@ -28,16 +31,6 @@
 	app.use(passport.initialize());
 	app.use(passport.session()); 
 	app.use(flash()); 
-
-	var apn = notify.apn({
-		key: 'apple_push_notifications.pem',
-		cert: 'apple_push_notifications.pem'
-	});
-
-	apn.send({
-			token: '<b3c676ac 8fd28d5f dc6e8203 2a2b1811 b165a10d e5267b0a 7bbe0f4d 2d6f1388>',
-			alert: "Fuck this piece of shit"
-	});
 
 	require('./passport')(passport);
 
@@ -55,14 +48,18 @@
 	app.get('/signup', function(req, res) {
 		res.render('signup.ejs', { message: req.flash('signupMessage') });
 	});
+
+	/*
 	app.post('/signup', passport.authenticate('local-signup', {
 		successRedirect : '/dashboard', 
 		failureRedirect : '/signup', 
 		failureFlash : true 
 	}));
+	*/
+
 	app.get('/dashboard', isLoggedIn, function(req, res) {
 		res.render('dashboard.ejs', {
-			user : req.user
+			user : req.user, status: req.status
 		});
 	});
 	app.get('/logout', function(req, res) {
@@ -72,23 +69,37 @@
 
 	app.get('/status', function(req, res) {
 
-		fs.readFile('status.json',function(err,data){
-			res.json(JSON.parse(data));
+		Status.findById({ _id: new ObjectId("56f93de17156c094585a3b25") }, function(err, status) {
+		  if (err) throw err;
+
+		  var json = {
+		  	"status": status.status,
+		  	"imageURL": status.imageURL,
+		  	"message": status.message
+		  };
+
+		  res.json(json);
 		});
+
 
 	});
 
-	app.post('/updateStore', function(req, res) {
+	app.post('/updateStore', isLoggedIn, function(req, res) {
 
-		var json = {
-			"staus": req.body.stat,
-			"imageURL": req.body.imageURL,
-			"message": req.body.message
-		};
+		Status.findById({ _id: new ObjectId("56f93de17156c094585a3b25") }, function(err, status) {
+		  if (err) throw err;
 
-		fs.writeFile('status.json', JSON.stringify(json, null, 4), function(err) {
+		  status.status = req.body.stat;
+		  status.imageURL = req.body.imageURL;
+		  status.message = req.body.message;
 
-        });
+		  status.save(function(err) {
+		    if (err) throw err;
+
+		    console.log('Status successfully updated!');
+		  });
+
+		});
 
         res.redirect('/status');
 
@@ -96,10 +107,7 @@
 
 	app.post('/push', isLoggedIn, function(req, res) {
 
-		apn.send({
-			token: '<7a2572fd 97d398d2 0adb6dc2 f4220464 3429f861 4b2b72d9 ead1db86 e49a1b92>',
-			alert: req.body.message
-		});
+		res.send('<p>This feature is disabled and push notification are done through <a href="https://onesignal.com/">onesignal</a></p>');
 
 	});
 
