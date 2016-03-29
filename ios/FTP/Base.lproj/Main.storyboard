@@ -195,7 +195,7 @@
                                 <blurEffect style="extraLight"/>
                             </visualEffectView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Oo2-gK-WuL">
-                                <rect key="frame" x="180" y="32" width="240" height="68"/>
+                                <rect key="frame" x="180" y="32" width="240" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="6VZ-ql-jJx"/>
                                 </constraints>
@@ -208,7 +208,7 @@
                             <constraint firstAttribute="trailing" secondItem="6I5-pI-7cW" secondAttribute="trailing" id="N9a-5i-zvp"/>
                             <constraint firstItem="Oo2-gK-WuL" firstAttribute="top" secondItem="tB6-PW-hQm" secondAttribute="bottom" constant="12" id="Otb-qy-au4"/>
                             <constraint firstItem="6I5-pI-7cW" firstAttribute="top" secondItem="4Ah-om-M3U" secondAttribute="top" id="jqh-cP-jcI"/>
-                            <constraint firstItem="9ZC-P4-Azg" firstAttribute="top" secondItem="Oo2-gK-WuL" secondAttribute="bottom" constant="500" id="ntG-is-kWT"/>
+                            <constraint firstItem="9ZC-P4-Azg" firstAttribute="top" secondItem="Oo2-gK-WuL" secondAttribute="bottom" constant="506" id="ntG-is-kWT"/>
                             <constraint firstItem="Oo2-gK-WuL" firstAttribute="centerX" secondItem="6I5-pI-7cW" secondAttribute="centerX" id="yQa-oc-ELA"/>
                         </constraints>
                     </view>
