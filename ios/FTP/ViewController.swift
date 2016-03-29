@@ -22,10 +22,6 @@ class ViewController: UIViewController
     var reachedEnd = false
     
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchProducts()

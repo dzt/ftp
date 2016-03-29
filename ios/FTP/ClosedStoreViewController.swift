@@ -21,7 +21,7 @@ class ClosedStoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = "https://gist.githubusercontent.com/dzt/009ffe6d6f770c226899/raw/80d3813c0276f912de976c4900cd761c950cf09a/store.json"
+        let url = "http://fuckthepopulation.herokuapp.com/status"
         
 
         Alamofire.request(.GET, url, encoding:.JSON).responseJSON
@@ -31,10 +31,10 @@ class ClosedStoreViewController: UIViewController {
                 
                 let response = JSON as! NSDictionary
                 
+                let imageC = response.objectForKey("imageURL") as? String
                 
-                
-                self.closedImage.hnk_setImageFromURL(NSURL(string: "https://i.imgur.com/SKsPvmz.jpg?1"))
-                self.closedMsg.text = response.objectForKey("closedDescription") as? String
+                self.closedImage.hnk_setImageFromURL(NSURL(string: imageC!))
+                self.closedMsg.text = response.objectForKey("message") as? String
                 
                 print(response)
                 
