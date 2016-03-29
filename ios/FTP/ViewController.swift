@@ -17,6 +17,11 @@ class ViewController: UIViewController
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var twitterButton: UIButton!
+    @IBOutlet weak var instaButton: UIButton!
+    @IBOutlet weak var newsButton: UIButton!
+    @IBOutlet weak var contactButton: UIButton!
+    
     var products = [BUYProduct]()
     var currentPage: UInt = 1
     var reachedEnd = false
@@ -24,9 +29,32 @@ class ViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         fetchProducts()
         
+        twitterButton.addTarget(self, action: "twitterClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        instaButton.addTarget(self, action: "instaClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        newsButton.addTarget(self, action: "newsClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        contactButton.addTarget(self, action: "contactClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        
     }
+    
+    func twitterClicked(sender:UIButton!) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://twitter.com/ftp")!)
+    }
+    
+    func instaClicked(sender:UIButton!) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://www.instagram.com/fuckthepopulation/")!)
+    }
+    
+    func newsClicked(sender:UIButton!) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://fuckthepopulation.com/pages/newsletter")!)
+    }
+    
+    func contactClicked(sender:UIButton!) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://fuckthepopulation.com/pages/newsletter")!)
+    }
+    
     
     func fetchProducts() {
         Shopify.client?.getProductsPage(currentPage) { (products, page, reachedEnd, error) -> Void in
