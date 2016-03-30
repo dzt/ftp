@@ -17,10 +17,13 @@ class ViewController: UIViewController
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+
     @IBOutlet weak var twitterButton: UIButton!
     @IBOutlet weak var instaButton: UIButton!
-    @IBOutlet weak var newsButton: UIButton!
-    @IBOutlet weak var contactButton: UIButton!
+    @IBOutlet weak var mailButton: UIButton!
+
+    
+    @IBOutlet weak var linksLabel: UILabel!
     
     var products = [BUYProduct]()
     var currentPage: UInt = 1
@@ -32,10 +35,10 @@ class ViewController: UIViewController
 
         fetchProducts()
         
-        //twitterButton.addTarget(self, action: "twitterClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        //instaButton.addTarget(self, action: "instaClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        twitterButton.addTarget(self, action: "twitterClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        instaButton.addTarget(self, action: "instaClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         //newsButton.addTarget(self, action: "newsClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        //contactButton.addTarget(self, action: "contactClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        mailButton.addTarget(self, action: "contactClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         
     }
     
