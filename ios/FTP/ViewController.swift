@@ -32,10 +32,10 @@ class ViewController: UIViewController
 
         fetchProducts()
         
-        twitterButton.addTarget(self, action: "twitterClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        instaButton.addTarget(self, action: "instaClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        newsButton.addTarget(self, action: "newsClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        contactButton.addTarget(self, action: "contactClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        //twitterButton.addTarget(self, action: "twitterClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        //instaButton.addTarget(self, action: "instaClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        //newsButton.addTarget(self, action: "newsClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        //contactButton.addTarget(self, action: "contactClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         
     }
     
@@ -52,7 +52,7 @@ class ViewController: UIViewController
     }
     
     func contactClicked(sender:UIButton!) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://fuckthepopulation.com/pages/newsletter")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: " mailto:info@fuckthepopulation.com")!)
     }
     
     
