@@ -17,6 +17,7 @@
 		D05EDBEC1CA0927A0086575E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05EDBEB1CA0927A0086575E /* SplashViewController.swift */; };
 		D05EDBEE1CA09DE10086575E /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05EDBED1CA09DE10086575E /* UIImage+Gif.swift */; };
 		D05EDBF01CA0A0EB0086575E /* anim.gif in Resources */ = {isa = PBXBuildFile; fileRef = D05EDBEF1CA0A0EB0086575E /* anim.gif */; };
+		D090DAAC1CAC2D2500C262FC /* JSSAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090DAAB1CAC2D2500C262FC /* JSSAlertView.swift */; };
 		D0F1251A1CA98A6A00ED182A /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F125191CA98A6100ED182A /* SpriteKit.framework */; };
 		D0F792D21C9E3201002EC76F /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F792D11C9E3201002EC76F /* ProductCollectionViewCell.swift */; };
 		D0F792E21C9F5FDE002EC76F /* Shopify.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F792E11C9F5FDE002EC76F /* Shopify.swift */; };
@@ -37,6 +38,7 @@
 		D05EDBEB1CA0927A0086575E /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D05EDBED1CA09DE10086575E /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		D05EDBEF1CA0A0EB0086575E /* anim.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = anim.gif; sourceTree = "<group>"; };
+		D090DAAB1CAC2D2500C262FC /* JSSAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSSAlertView.swift; sourceTree = "<group>"; };
 		D0F125181CA8E89F00ED182A /* FTP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTP-Bridging-Header.h"; sourceTree = "<group>"; };
 		D0F125191CA98A6100ED182A /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		D0F792D11C9E3201002EC76F /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				D00A68B51C9DFD9000EF086B /* AppDelegate.swift */,
 				D05EDBED1CA09DE10086575E /* UIImage+Gif.swift */,
 				D0F125181CA8E89F00ED182A /* FTP-Bridging-Header.h */,
+				D090DAAB1CAC2D2500C262FC /* JSSAlertView.swift */,
 			);
 			name = Extras/Essentials;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D090DAAC1CAC2D2500C262FC /* JSSAlertView.swift in Sources */,
 				D05EDBEE1CA09DE10086575E /* UIImage+Gif.swift in Sources */,
 				D0F792E21C9F5FDE002EC76F /* Shopify.swift in Sources */,
 				D00A68B81C9DFD9000EF086B /* ViewController.swift in Sources */,
@@ -389,8 +393,8 @@
 			baseConfigurationReference = DE8FA208CA450AB7793029B5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Zachary  Clark (37WFQNPGMH)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zachary  Clark (37WFQNPGMH)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -399,7 +403,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kcufthepopulation.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "251a6bed-bdd6-4215-a287-96ce3844d9b8";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "FTP/FTP-Bridging-Header.h";
 			};
 			name = Debug;
@@ -409,8 +413,8 @@
 			baseConfigurationReference = E5AC6F009F7B73C3963A7486 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Zachary  Clark (37WFQNPGMH)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zachary  Clark (37WFQNPGMH)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -419,7 +423,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kcufthepopulation.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "251a6bed-bdd6-4215-a287-96ce3844d9b8";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "FTP/FTP-Bridging-Header.h";
 			};
 			name = Release;

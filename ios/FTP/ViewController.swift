@@ -22,8 +22,12 @@ class ViewController: UIViewController
     @IBOutlet weak var instaButton: UIButton!
     @IBOutlet weak var mailButton: UIButton!
 
+    @IBOutlet weak var ftpImg: UIImageView!
     
     @IBOutlet weak var linksLabel: UILabel!
+    
+    @IBOutlet weak var termsButton: UIButton!
+
     
     var products = [BUYProduct]()
     var currentPage: UInt = 1
@@ -37,9 +41,36 @@ class ViewController: UIViewController
         
         twitterButton.addTarget(self, action: "twitterClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         instaButton.addTarget(self, action: "instaClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        //newsButton.addTarget(self, action: "newsClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         mailButton.addTarget(self, action: "contactClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         
+        termsButton.addTarget(self, action: "alert:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        if UIDevice().userInterfaceIdiom == .Phone {
+            switch UIScreen.mainScreen().nativeBounds.height {
+            case 480:
+                ftpImg.hidden = true
+            case 960:
+                ftpImg.hidden = true
+            case 1136:
+                print("iPhone 5 or 5S or 5C")
+            case 1334:
+                print("iPhone 6 or 6S")
+            case 2208:
+                print("iPhone 6+ or 6S+")
+            default:
+                print("unknown")
+            }
+        }
+        
+        
+    }
+    
+    func alert(sender:UIButton!) {
+        JSSAlertView().show(
+            self, // the parent view controller of the alert
+            title: "TERMS & INFO",
+            text: "We currently only allow domestic shipping via USPS Priority Mail. Please allow 3-5 days to process orders. Once order is shipped you will receive a tracking number via email. Please allow 2-5 days to arrive once shipped. We are not responsible for any lost or stolen packages. If you have any questions regarding your order email info@kcufthepopulation.com. All sales are final. No refunds or exchanges."
+        )
     }
     
     func twitterClicked(sender:UIButton!) {
@@ -55,7 +86,7 @@ class ViewController: UIViewController
     }
     
     func contactClicked(sender:UIButton!) {
-        UIApplication.sharedApplication().openURL(NSURL(string: " mailto:info@fuckthepopulation.com")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: "mailto:info@fuckthepopulation.com")!)
     }
     
     
