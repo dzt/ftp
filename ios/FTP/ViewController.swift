@@ -27,6 +27,9 @@ class ViewController: UIViewController
     @IBOutlet weak var linksLabel: UILabel!
     
     @IBOutlet weak var termsButton: UIButton!
+    
+    
+    //@IBOutlet weak var refreshButton: UIButton!
 
     
     var products = [BUYProduct]()
@@ -44,6 +47,8 @@ class ViewController: UIViewController
         mailButton.addTarget(self, action: "contactClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         
         termsButton.addTarget(self, action: "alert:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        //refreshButton.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.TouchUpInside)
         
         if UIDevice().userInterfaceIdiom == .Phone {
             switch UIScreen.mainScreen().nativeBounds.height {
@@ -87,6 +92,11 @@ class ViewController: UIViewController
     
     func contactClicked(sender:UIButton!) {
         UIApplication.sharedApplication().openURL(NSURL(string: "mailto:info@fuckthepopulation.com")!)
+    }
+    
+    func refresh(sender:UIButton!) {
+        self.collectionView?.reloadData()
+        fetchProducts()
     }
     
     

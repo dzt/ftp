@@ -17,11 +17,18 @@ class ClosedStoreViewController: UIViewController {
     @IBOutlet weak var closedImage: UIImageView!
     @IBOutlet weak var closedMsg: UILabel!
     
+    @IBOutlet weak var twitter: UIButton!
+    @IBOutlet weak var mail: UIButton!
+    @IBOutlet weak var insta: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let url = "http://fuckthepopulation.herokuapp.com/status"
+        
+        twitter.addTarget(self, action: "twitterClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        insta.addTarget(self, action: "instaClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        mail.addTarget(self, action: "contactClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         
 
         Alamofire.request(.GET, url, encoding:.JSON).responseJSON
@@ -44,6 +51,22 @@ class ClosedStoreViewController: UIViewController {
             
             }
         }
+    }
+    
+    func twitterClicked(sender:UIButton!) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://twitter.com/ftp")!)
+    }
+    
+    func instaClicked(sender:UIButton!) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://www.instagram.com/fuckthepopulation/")!)
+    }
+    
+    func newsClicked(sender:UIButton!) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://fuckthepopulation.com/pages/newsletter")!)
+    }
+    
+    func contactClicked(sender:UIButton!) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "mailto:info@fuckthepopulation.com")!)
     }
     
 }
