@@ -1,4 +1,3 @@
-<!-- views/profile.ejs -->
 <!doctype html>
 <html>
 <head>
@@ -44,19 +43,20 @@
 
 					<label for="text">Store Status</label>
 				   type in "open" or "closed" to set the store status (make sure to type in lowercase)
-				   <input type="text" class="form-control" id="text" name="stat" value="">
+				   <input type="text" class="form-control" id="text" name="stat" value="<%= status.status %>">
 
 				  </br>
 
-				   <label for="text">Image URL</label>
+				   <label for="text" value="<%= status.imageURL %>">Image URL</label>
 				   (example: https://i.imgur.com/SKsPvmz.jpg)
-				   <input type="text" class="form-control" id="text" name="imageURL" value="">
+				   <input type="text" class="form-control" id="text" name="imageURL" value="<%= status.imageURL %>">
+
 
 				   </br>
 
 				  <div class="form-group">
 				    <label for="pwd">Message</label>
-				    <textarea class="form-control" id="exampleTextarea" rows="3" name="message" value="message"></textarea>
+				    <textarea class="form-control" id="exampleTextarea" rows="3" name="message" value="message"><%= status.message %></textarea>
 						</br>
 				  </div>
 				  <button type="submit" class="btn btn-primary">Save Changes</button>

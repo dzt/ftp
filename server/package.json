@@ -29,6 +29,7 @@
     "express": "^4.13.4",
     "express-session": "^1.13.0",
     "fs": "0.0.2",
+    "imgur-upload": "^0.1.2",
     "mongoose": "^4.4.10",
     "morgan": "^1.7.0",
     "node-pushserver": "^0.5.4",

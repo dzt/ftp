@@ -58,10 +58,24 @@
 	*/
 
 	app.get('/dashboard', isLoggedIn, function(req, res) {
-		res.render('dashboard.ejs', {
-			user : req.user, status: req.status
+
+		Status.findById({ _id: new ObjectId("56f93de17156c094585a3b25") }, function(err, status) {
+		  if (err) throw err;
+
+		  var json = {
+		  	"status": status.status,
+		  	"imageURL": status.imageURL,
+		  	"message": status.message
+		  };
+
+			res.render('dashboard.ejs', {
+				user : req.user,
+				status: json
+			});
+
 		});
 	});
+
 	app.get('/logout', function(req, res) {
 		req.logout();
 		res.redirect('/');
