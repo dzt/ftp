@@ -51,6 +51,11 @@ Development (Server)
 
   - The Administration Panel allows <a href="twitter.com/zacftp"></a> and I to make push notifications through out both clients (Android and iOS) using <a href="https://www.npmjs.com/package/push-notify">push-notify</a>. In addition the server allows us to close or open the FTP store and change the closed store page (picture and message).
 
+Development (Android)
+-----------
+
+
+
 Screenshots
 -----------
 <img src="art/ios.png" />
