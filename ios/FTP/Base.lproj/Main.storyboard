@@ -214,7 +214,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="E7E933C2-30EB-4369-8C0C-427AAD7FCC15" translatesAutoresizingMaskIntoConstraints="NO" id="46C-vR-EpR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="D590BE73-0861-4289-BCFE-1D3185888A35" translatesAutoresizingMaskIntoConstraints="NO" id="46C-vR-EpR">
                                 <rect key="frame" x="256" y="524" width="89" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="2ix-yA-n0a"/>
@@ -340,7 +340,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="E7E933C2-30EB-4369-8C0C-427AAD7FCC15" width="500" height="500">
+        <image name="D590BE73-0861-4289-BCFE-1D3185888A35" width="500" height="500">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -12850,7 +12850,7 @@ AQIAAwAAAAMAC3JaAQMAAwAAAAEAAQAAAQYAAwAAAAEAAgAAAREABAAAAAYAC3J4ARIAAwAAAAEAAQAA
 ARUAAwAAAAEAAwAAARYAAwAAAAEAVwAAARcABAAAAAYAC3JgARwAAwAAAAEAAQAAAVMAAwAAAAMAC3KQ
 h3MABwAADEgAC3KWAAAAAAAIAAgACAAB/cQAAf3EAAH9xAAB/cQAAf3EAAF83AAAAAgAAf3MAAP7kAAF
 +VQAB/cYAAn03AABAAEAAQAADEhMaW5vAhAAAG1udHJSR0IgWFlaIAfOAAIACQAGADEAAGFjc3BNU0ZU
-AAAAAElFQyBzUkdCAAAAAAAAAAAAAAAAAAD21gABAAAAANMtSFAgIAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAElFQyBzUkdCAAAAAAAAAAAAAAABAAD21gABAAAAANMtSFAgIAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEWNwcnQAAAFQAAAAM2Rlc2MAAAGEAAAAbHd0cHQAAAHw
 AAAAFGJrcHQAAAIEAAAAFHJYWVoAAAIYAAAAFGdYWVoAAAIsAAAAFGJYWVoAAAJAAAAAFGRtbmQAAAJU
 AAAAcGRtZGQAAALEAAAAiHZ1ZWQAAANMAAAAhnZpZXcAAAPUAAAAJGx1bWkAAAP4AAAAFG1lYXMAAAQM

@@ -1,4 +1,4 @@
-	// require('dotenv').load();
+	require('dotenv').load();
 
 	var express  = require('express');
 	var app      = express();
@@ -15,6 +15,7 @@
 	var fs = require('fs');
 	var path = require('path');
 
+
 	var Status = require('./status');
 	var ObjectId = require('mongoose').Types.ObjectId; 
 
@@ -30,7 +31,8 @@
 	app.use(session({ secret: 'EverybodyScreamsFTP' })); 
 	app.use(passport.initialize());
 	app.use(passport.session()); 
-	app.use(flash()); 
+	app.use(flash());
+
 
 	require('./passport')(passport);
 
@@ -100,11 +102,13 @@
 
 	app.post('/updateStore', isLoggedIn, function(req, res) {
 
+		console.log(req.file.path);
+
 		Status.findById({ _id: new ObjectId("56f93de17156c094585a3b25") }, function(err, status) {
 		  if (err) throw err;
 
 		  status.status = req.body.stat;
-		  status.imageURL = req.body.imageURL;
+		  status.imageURL = req.body.image;
 		  status.message = req.body.message;
 
 		  status.save(function(err) {

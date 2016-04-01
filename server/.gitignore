@@ -3,8 +3,6 @@ logs
 *.log
 npm-debug.log*
 
-apple_push_notifications.pem
-
 .env
 .DS_Store
 
