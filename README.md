@@ -9,7 +9,7 @@ This App features the ability to get push updates on the latest FTP Releases on 
 Have any question? feel free to <a href="mailto:thepcmrtim@gmail.com">Email me</a>.
 
 
-<a href="https://itunes.apple.com/us/app/ftp-for-iphone/id1097416612?ls=1&mt=8"><img src="http://allstage.ca/wp-content/uploads/2015/03/Allstage-The-App-Store.png"></img></a>
+<a href="https://itunes.apple.com/us/app/ftp-for-iphone/id1097416612?ls=1&mt=8"><img src="http://allstage.ca/wp-content/uploads/2015/03/Allstage-The-App-Store.png" height="20%"></img></a>
 
 
 Development (iOS)
