@@ -12,7 +12,7 @@ Have any question? feel free to <a href="mailto:thepcmrtim@gmail.com">Email me</
 
 <a href="https://itunes.apple.com/us/app/ftp-for-iphone/id1097416612?ls=1&mt=8"><img src="http://allstage.ca/wp-content/uploads/2015/03/Allstage-The-App-Store.png" height="20%" width="20%"></img></a>
 
-<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="30%" width="30%"></img>
+<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="25%" width="25%"></img>
 
 </span>
 
