@@ -239,9 +239,6 @@
                                 <state key="normal" title="TWITTER / ">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="OFD-jD-7F3" kind="show" id="3e3-ek-AGQ"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVU-3T-Oov">
                                 <rect key="frame" x="346" y="369" width="254" height="30"/>
@@ -286,6 +283,9 @@
                     <connections>
                         <outlet property="closedImage" destination="u0C-nG-boY" id="ery-k2-n1h"/>
                         <outlet property="closedMsg" destination="5cq-uT-buN" id="XNI-k3-8ej"/>
+                        <outlet property="insta" destination="SXk-u1-R6i" id="Tid-59-Syk"/>
+                        <outlet property="mail" destination="GVU-3T-Oov" id="frf-kX-Zjv"/>
+                        <outlet property="twitter" destination="Cf5-yg-mnM" id="OEq-HC-Tb3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eK0-ck-ZWx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -334,14 +334,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qif-6h-YwQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-759" y="322"/>
+            <point key="canvasLocation" x="-760" y="337"/>
         </scene>
     </scenes>
     <resources>
         <image name="fade" width="500" height="500"/>
         <image name="logo" width="1340" height="490"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="3e3-ek-AGQ"/>
-    </inferredMetricsTieBreakers>
 </document>

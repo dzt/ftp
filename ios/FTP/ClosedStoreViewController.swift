@@ -26,9 +26,9 @@ class ClosedStoreViewController: UIViewController {
         
         let url = "http://fuckthepopulation.herokuapp.com/status"
         
-        //twitter.addTarget(self, action: "twitterClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        //insta.addTarget(self, action: "instaClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        //mail.addTarget(self, action: "contactClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        twitter.addTarget(self, action: "twitterClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        insta.addTarget(self, action: "instaClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        mail.addTarget(self, action: "newsClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         
 
         Alamofire.request(.GET, url, encoding:.JSON).responseJSON

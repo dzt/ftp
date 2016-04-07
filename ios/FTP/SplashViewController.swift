@@ -39,6 +39,20 @@ class SplashViewController: UIViewController {
                 
                 if (status == "closed") {
                     self.performSegueWithIdentifier("closedSegue", sender: self)
+                } else {
+                    
+                    let alert = UIAlertController(title: "Sorry, no network connection!", message:"Please check your internet connection or try again.", preferredStyle: .Alert)
+                    let action = UIAlertAction(title: "OK", style: .Default) { _ in
+                        
+                        self.view.setNeedsDisplay()
+                        
+                    }
+                    alert.addAction(action)
+                    self.presentViewController(alert, animated: true){}
+                    
+                    let timer = NSTimer.scheduledTimerWithTimeInterval(
+                        1.0, target: self, selector: Selector("show"), userInfo: nil, repeats: false)
+                    
                 }
                 
                 print(response)
@@ -46,11 +60,11 @@ class SplashViewController: UIViewController {
             case .Failure(let error):
                 
                 print("Request failed with error: \(error)")
-                let alert = UIAlertView()
-                alert.title = "Sorry, no network connection!"
-                alert.message = "Please check your internet connection or try again."
-                alert.addButtonWithTitle("Ok")
-                alert.show()
+                let alert2 = UIAlertView()
+                alert2.title = "Sorry, no network connection!"
+                alert2.message = "Please check your internet connection or try again."
+                alert2.addButtonWithTitle("Ok")
+                alert2.show()
                 
                 }
         }
