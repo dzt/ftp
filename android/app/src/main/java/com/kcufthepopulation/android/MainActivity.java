@@ -1,18 +1,14 @@
 package com.kcufthepopulation.android;
-
-<<<<<<< HEAD
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-=======
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.onesignal.OneSignal;
->>>>>>> 63e3b497d9079acc38548cf9688567fc6df87e8f
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -34,10 +29,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-=======
 
         OneSignal.startInit(this).init();
 
     }
->>>>>>> 63e3b497d9079acc38548cf9688567fc6df87e8f
 }
