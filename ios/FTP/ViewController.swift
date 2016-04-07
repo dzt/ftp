@@ -28,8 +28,6 @@ class ViewController: UIViewController
     
     @IBOutlet weak var termsButton: UIButton!
     
-    
-    //@IBOutlet weak var refreshButton: UIButton!
 
     
     var products = [BUYProduct]()
@@ -48,14 +46,12 @@ class ViewController: UIViewController
         
         termsButton.addTarget(self, action: "alert:", forControlEvents: UIControlEvents.TouchUpInside)
         
-        //refreshButton.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.TouchUpInside)
-        
         if UIDevice().userInterfaceIdiom == .Phone {
             switch UIScreen.mainScreen().nativeBounds.height {
             case 480:
-                ftpImg.hidden = true
+                print("Classic")
             case 960:
-                ftpImg.hidden = true
+                print("iPhone 4 or 4s")
             case 1136:
                 print("iPhone 5 or 5S or 5C")
             case 1334:

@@ -26,9 +26,9 @@ class ClosedStoreViewController: UIViewController {
         
         let url = "http://fuckthepopulation.herokuapp.com/status"
         
-        twitter.addTarget(self, action: "twitterClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        insta.addTarget(self, action: "instaClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        mail.addTarget(self, action: "contactClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        //twitter.addTarget(self, action: "twitterClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        //insta.addTarget(self, action: "instaClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        //mail.addTarget(self, action: "contactClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         
 
         Alamofire.request(.GET, url, encoding:.JSON).responseJSON
@@ -48,6 +48,11 @@ class ClosedStoreViewController: UIViewController {
             case .Failure(let error):
                 
                 print("Request failed with error: \(error)")
+                let alert = UIAlertView()
+                alert.title = "Sorry, no network connection!"
+                alert.message = "Please check your internet connection or try again."
+                alert.addButtonWithTitle("Ok")
+                alert.show()
             
             }
         }

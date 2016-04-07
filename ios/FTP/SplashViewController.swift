@@ -46,6 +46,11 @@ class SplashViewController: UIViewController {
             case .Failure(let error):
                 
                 print("Request failed with error: \(error)")
+                let alert = UIAlertView()
+                alert.title = "Sorry, no network connection!"
+                alert.message = "Please check your internet connection or try again."
+                alert.addButtonWithTitle("Ok")
+                alert.show()
                 
                 }
         }

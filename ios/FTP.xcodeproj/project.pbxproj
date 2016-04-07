@@ -403,7 +403,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kcufthepopulation.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4f3a3e14-e987-4fe6-ac3c-3efb902baa74";
 				SWIFT_OBJC_BRIDGING_HEADER = "FTP/FTP-Bridging-Header.h";
 			};
 			name = Debug;
@@ -423,7 +423,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kcufthepopulation.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4f3a3e14-e987-4fe6-ac3c-3efb902baa74";
 				SWIFT_OBJC_BRIDGING_HEADER = "FTP/FTP-Bridging-Header.h";
 			};
 			name = Release;
