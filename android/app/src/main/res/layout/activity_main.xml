@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -28,6 +29,15 @@
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
+=======
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kcufthepopulation.android.MainActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/include" />
+>>>>>>> 63e3b497d9079acc38548cf9688567fc6df87e8f
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,9 +47,50 @@
         android:id="@+id/textView"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+<<<<<<< HEAD
         android:typeface="monospace"
         android:textStyle="bold"
         android:layout_marginBottom="10dp" />
 
+=======
+        android:layout_marginBottom="10dp"
+        android:textColor="#000000"
+        android:typeface="monospace" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/imageView2"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/instablack"
+        android:paddingBottom="5dp" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/imageView3"
+        android:src="@drawable/mailblack"
+        android:paddingBottom="5dp"
+        android:layout_above="@+id/textView"
+        android:layout_toRightOf="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/imageView4"
+        android:src="@drawable/birdblack"
+        android:paddingBottom="5dp"
+        android:layout_above="@+id/textView"
+        android:layout_toLeftOf="@+id/imageView2"
+        android:layout_toStartOf="@+id/imageView2" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/horizontal_recycler_view"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"/>
+>>>>>>> 63e3b497d9079acc38548cf9688567fc6df87e8f
 
 </RelativeLayout>

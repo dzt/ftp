@@ -8,6 +8,15 @@ This App features the ability to get push updates on the latest FTP Releases on 
 
 Have any question? feel free to <a href="mailto:thepcmrtim@gmail.com">Email me</a>.
 
+<span>
+
+<a href="https://itunes.apple.com/us/app/ftp-for-iphone/id1097416612?ls=1&mt=8"><img src="http://allstage.ca/wp-content/uploads/2015/03/Allstage-The-App-Store.png" height="20%" width="20%"></img></a>
+
+<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="25%" width="25%"></img>
+
+</span>
+
+
 Development (iOS)
 -----------
 
@@ -50,6 +59,11 @@ Development (Server)
   - The server handles push notifications and the FTP Administration Panel.
 
   - The Administration Panel allows <a href="twitter.com/zacftp"></a> and I to make push notifications through out both clients (Android and iOS) using <a href="https://www.npmjs.com/package/push-notify">push-notify</a>. In addition the server allows us to close or open the FTP store and change the closed store page (picture and message).
+
+Development (Android)
+-----------
+
+
 
 Screenshots
 -----------
