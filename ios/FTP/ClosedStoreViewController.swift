@@ -12,8 +12,6 @@ import Alamofire
 
 class ClosedStoreViewController: UIViewController {
     
-    // IBOutlets
-    
     @IBOutlet weak var closedImage: UIImageView!
     @IBOutlet weak var closedMsg: UILabel!
     
@@ -21,10 +19,13 @@ class ClosedStoreViewController: UIViewController {
     @IBOutlet weak var mail: UIButton!
     @IBOutlet weak var insta: UIButton!
     
+    @IBOutlet weak var ftpLogo: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = "http://fuckthepopulation.herokuapp.com/status"
+        let url = "https://ftpadmin-ftpadmin.rhcloud.com/status"
         
         twitter.addTarget(self, action: "twitterClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         insta.addTarget(self, action: "instaClicked:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -48,14 +49,19 @@ class ClosedStoreViewController: UIViewController {
             case .Failure(let error):
                 
                 print("Request failed with error: \(error)")
-                let alert = UIAlertView()
-                alert.title = "Sorry, no network connection!"
-                alert.message = "Please check your internet connection or try again."
-                alert.addButtonWithTitle("Ok")
-                alert.show()
             
             }
         }
+    }
+    
+    func resizeImage(image: UIImage, newHeight: CGFloat) -> UIImage {
+        let scale = newHeight / image.size.height
+        let newWidth = image.size.width * scale
+        UIGraphicsBeginImageContext(CGSizeMake(newWidth, newHeight))
+        image.drawInRect(CGRectMake(0, 0, newWidth, newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
     }
     
     func twitterClicked(sender:UIButton!) {

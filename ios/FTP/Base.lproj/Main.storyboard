@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="phW-zv-wCa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="phW-zv-wCa">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -21,7 +21,7 @@
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6I5-pI-7cW">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dyu-0V-KoD">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="dyu-0V-KoD">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -126,8 +126,9 @@
                                                 <outlet property="delegate" destination="OFD-jD-7F3" id="KBT-b7-yuT"/>
                                             </connections>
                                         </collectionView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ayn-7j-aLA">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="highreslogo" translatesAutoresizingMaskIntoConstraints="NO" id="ayn-7j-aLA">
                                             <rect key="frame" x="248" y="14" width="105" height="73"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="105" id="9Kq-W6-lN4"/>
                                                 <constraint firstAttribute="height" constant="73" id="j82-du-Z5n"/>
@@ -197,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZW-fd-aM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-41" y="714"/>
+            <point key="canvasLocation" x="-37" y="760"/>
         </scene>
         <!--Closed Store View Controller-->
         <scene sceneID="uIb-5J-hS6">
@@ -220,7 +221,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="uBP-P3-6EB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="highreslogo" translatesAutoresizingMaskIntoConstraints="NO" id="uBP-P3-6EB">
                                 <rect key="frame" x="262" y="28" width="76" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="76" id="ixb-8a-sTc"/>
@@ -233,10 +234,20 @@
                                     <constraint firstAttribute="height" constant="202" id="aWq-Ve-hCD"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cf5-yg-mnM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cf5-yg-mnM">
                                 <rect key="frame" x="0.0" y="369" width="248" height="30"/>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="12"/>
                                 <state key="normal" title="TWITTER / ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXk-u1-R6i">
+                                <rect key="frame" x="256" y="369" width="82" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="qCj-sw-Njs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="12"/>
+                                <state key="normal" title="INSTAGRAM / ">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -244,13 +255,6 @@
                                 <rect key="frame" x="346" y="369" width="254" height="30"/>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="12"/>
                                 <state key="normal" title="NEWSLETTER">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXk-u1-R6i">
-                                <rect key="frame" x="256" y="369" width="82" height="30"/>
-                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="12"/>
-                                <state key="normal" title="INSTAGRAM / ">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -265,7 +269,6 @@
                             <constraint firstItem="u0C-nG-boY" firstAttribute="leading" secondItem="5cq-uT-buN" secondAttribute="leading" id="DXz-7v-Aaf"/>
                             <constraint firstItem="Cf5-yg-mnM" firstAttribute="baseline" secondItem="SXk-u1-R6i" secondAttribute="firstBaseline" id="DeC-eM-Xvm"/>
                             <constraint firstItem="5cq-uT-buN" firstAttribute="top" secondItem="u0C-nG-boY" secondAttribute="bottom" constant="18" id="FPK-iQ-h6c"/>
-                            <constraint firstItem="GVU-3T-Oov" firstAttribute="leading" secondItem="SXk-u1-R6i" secondAttribute="trailing" constant="8" symbolic="YES" id="Fwi-HI-3bL"/>
                             <constraint firstItem="u0C-nG-boY" firstAttribute="top" secondItem="uBP-P3-6EB" secondAttribute="bottom" constant="13" id="HC0-O4-ATl"/>
                             <constraint firstItem="5cq-uT-buN" firstAttribute="trailing" secondItem="CFp-VS-a0K" secondAttribute="trailingMargin" id="HLN-9c-sii"/>
                             <constraint firstItem="u0C-nG-boY" firstAttribute="centerX" secondItem="uBP-P3-6EB" secondAttribute="centerX" id="LA6-tR-mEr"/>
@@ -274,6 +277,7 @@
                             <constraint firstItem="SXk-u1-R6i" firstAttribute="top" secondItem="GVU-3T-Oov" secondAttribute="top" id="QTC-8s-ewI"/>
                             <constraint firstItem="REA-9i-VOx" firstAttribute="top" secondItem="Cf5-yg-mnM" secondAttribute="bottom" constant="201" id="QpG-pv-tWy"/>
                             <constraint firstItem="5cq-uT-buN" firstAttribute="leading" secondItem="CFp-VS-a0K" secondAttribute="leadingMargin" id="afN-ky-n6A"/>
+                            <constraint firstItem="GVU-3T-Oov" firstAttribute="leading" secondItem="SXk-u1-R6i" secondAttribute="trailing" constant="8" symbolic="YES" id="cOM-tM-6oc"/>
                             <constraint firstItem="Cf5-yg-mnM" firstAttribute="top" secondItem="SXk-u1-R6i" secondAttribute="top" id="cZY-aI-4TZ"/>
                             <constraint firstItem="Cf5-yg-mnM" firstAttribute="top" secondItem="u0C-nG-boY" secondAttribute="bottom" constant="75" id="uGe-VJ-TRY"/>
                             <constraint firstItem="SXk-u1-R6i" firstAttribute="leading" secondItem="Cf5-yg-mnM" secondAttribute="trailing" constant="8" symbolic="YES" id="ucx-cb-VwT"/>
@@ -283,6 +287,7 @@
                     <connections>
                         <outlet property="closedImage" destination="u0C-nG-boY" id="ery-k2-n1h"/>
                         <outlet property="closedMsg" destination="5cq-uT-buN" id="XNI-k3-8ej"/>
+                        <outlet property="ftpLogo" destination="uBP-P3-6EB" id="XuI-zO-U0x"/>
                         <outlet property="insta" destination="SXk-u1-R6i" id="Tid-59-Syk"/>
                         <outlet property="mail" destination="GVU-3T-Oov" id="frf-kX-Zjv"/>
                         <outlet property="twitter" destination="Cf5-yg-mnM" id="OEq-HC-Tb3"/>
@@ -290,7 +295,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eK0-ck-ZWx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="635" y="322"/>
+            <point key="canvasLocation" x="641" y="337"/>
+        </scene>
+        <!--Closed Store View Controller-->
+        <scene sceneID="p4K-wq-zXr">
+            <objects>
+                <viewController id="EHV-fj-HVk" customClass="ClosedStoreViewController" customModule="FTP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W8O-P3-hHE"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Wn-RU-e1L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qoq-oK-pRC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OIh-Z6-urU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-37" y="-299"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="dVQ-7d-zud">
@@ -339,6 +362,6 @@
     </scenes>
     <resources>
         <image name="fade" width="500" height="500"/>
-        <image name="logo" width="1340" height="490"/>
+        <image name="highreslogo" width="2478" height="905"/>
     </resources>
 </document>

@@ -12,7 +12,6 @@ import Alamofire
 class SplashViewController: UIViewController {
     
     @IBOutlet weak var logo: UIImageView!
-    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
@@ -24,10 +23,13 @@ class SplashViewController: UIViewController {
         let jeremyGif = UIImage.gifWithName("anim")
         logo.image = jeremyGif
         
-        let timer = NSTimer.scheduledTimerWithTimeInterval(
-            5.5, target: self, selector: Selector("show"), userInfo: nil, repeats: false)
+        let timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("ftpServ"), userInfo: nil, repeats: false)
         
-        let url = "https://fuckthepopulation.herokuapp.com/status"
+    }
+    
+    let url = "https://ftpadmin-ftpadmin.rhcloud.com/status"
+    
+    func ftpServ() {
         
         Alamofire.request(.GET, url, encoding:.JSON).responseJSON
             { response in switch response.result {
@@ -38,20 +40,12 @@ class SplashViewController: UIViewController {
                 let status = response.objectForKey("status") as! String
                 
                 if (status == "closed") {
+                    
                     self.performSegueWithIdentifier("closedSegue", sender: self)
-                } else {
                     
-                    let alert = UIAlertController(title: "Sorry, no network connection!", message:"Please check your internet connection or try again.", preferredStyle: .Alert)
-                    let action = UIAlertAction(title: "OK", style: .Default) { _ in
-                        
-                        self.view.setNeedsDisplay()
-                        
-                    }
-                    alert.addAction(action)
-                    self.presentViewController(alert, animated: true){}
+                } else if(status == "open") {
                     
-                    let timer = NSTimer.scheduledTimerWithTimeInterval(
-                        1.0, target: self, selector: Selector("show"), userInfo: nil, repeats: false)
+                    self.performSegueWithIdentifier("showApp", sender: self)
                     
                 }
                 
@@ -60,21 +54,10 @@ class SplashViewController: UIViewController {
             case .Failure(let error):
                 
                 print("Request failed with error: \(error)")
-                let alert2 = UIAlertView()
-                alert2.title = "Sorry, no network connection!"
-                alert2.message = "Please check your internet connection or try again."
-                alert2.addButtonWithTitle("Ok")
-                alert2.show()
                 
                 }
         }
         
     }
-
-    func show() {
-        self.performSegueWithIdentifier("showApp", sender: self)
-    }
-    
-
 
 }

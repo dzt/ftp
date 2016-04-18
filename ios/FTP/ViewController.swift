@@ -14,18 +14,12 @@ class ViewController: UIViewController
     
 {
     
-    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-
     @IBOutlet weak var twitterButton: UIButton!
     @IBOutlet weak var instaButton: UIButton!
     @IBOutlet weak var mailButton: UIButton!
-
     @IBOutlet weak var ftpImg: UIImageView!
-    
-    @IBOutlet weak var linksLabel: UILabel!
-    
     @IBOutlet weak var termsButton: UIButton!
     
 
@@ -42,7 +36,7 @@ class ViewController: UIViewController
         
         twitterButton.addTarget(self, action: "twitterClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         instaButton.addTarget(self, action: "instaClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        mailButton.addTarget(self, action: "contactClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        mailButton.addTarget(self, action: "newsClicked:", forControlEvents: UIControlEvents.TouchUpInside)
         
         termsButton.addTarget(self, action: "alert:", forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -68,7 +62,8 @@ class ViewController: UIViewController
     
     func alert(sender:UIButton!) {
         JSSAlertView().show(
-            self, // the parent view controller of the alert
+            self,
+            
             title: "TERMS & INFO",
             text: "We currently only allow domestic shipping via USPS Priority Mail. Please allow 3-5 days to process orders. Once order is shipped you will receive a tracking number via email. Please allow 2-5 days to arrive once shipped. We are not responsible for any lost or stolen packages. If you have any questions regarding your order email info@kcufthepopulation.com. All sales are final. No refunds or exchanges."
         )
