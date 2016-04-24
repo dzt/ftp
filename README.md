@@ -1,6 +1,6 @@
 <img align="right" width="20%" style="float:right;padding:20px;" src="art/logo.png">
 
-Currently in development.
+Development for this App is discontinued. Thank you for the Support.
 
 <a href="https://twitter.com/ZACFTP/status/712079447071961093">Video Demo</a>
 
@@ -75,7 +75,7 @@ Notes & Q&A
 </br>
 - Will there be an Android version? <b>Yes, there will be a complete Android version in the next upcoming days?</b>
 </br>
-- Is this the official FTP App? <b>Yes</b>
+- Is this the official FTP App? <b>Once was, no longer.</b>
 </br>
 
 License
